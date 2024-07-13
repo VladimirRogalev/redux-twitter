@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {CHANGE_NAME, changeImage, changeName} from "../actions/userAction.js";
+import {changeImage, changeName} from "../actions/userAction.js";
 
 const Avatar = ({size}) => {
 
@@ -14,7 +14,7 @@ const Avatar = ({size}) => {
     };
     const handleClickImage = () => {
         const newUrl = prompt("Enter new url");
-        dispatch(changeImage( `"https://gravatar.com/avatar/${newUrl}?d=monsterid"`))
+        dispatch(changeImage( `https://gravatar.com/avatar/${newUrl}?d=monsterid`))
     };
     return (
         <img onContextMenu={handleClickName}
